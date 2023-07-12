@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+    </head>
+
+    <body>
+        <form th:action="@{/ask}" th:method="POST">
+            <h1>
+                <label>
+                    Hello. Please, tell us your story.
+
+                    <select>
+                        <option>What is your biggest regret?</option>
+                        <option>Who was your greatest love and why did you fall in love with them?</option>
+                        <option>What you wanted to say, but never dared / didn't have time to say?</option>
+                        <option>The biggest lie you regret to this day?</option>
+                        <option>Before I die…</option>
+                    </select>
+
+                    <input name="story" type="text" placeholder="Tell about your plans, goals and dreams">
+                </label>
+            </h1>
+
+            <input type="submit" value="Send">
+        </form>
+    </body>
+</html>

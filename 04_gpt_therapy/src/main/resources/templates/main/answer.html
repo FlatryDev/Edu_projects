@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Answer</title>
+    </head>
+
+    <body>
+        <h1>Here it goes.</h1>
+
+        <p th:if="${gpt_answer != null}" th:text="${gpt_answer}">Gpt answer.</p>
+        <p th:if="${gpt_answer == null}">Your answer is being generated. Please wait...</p>
+        <p><a href="#">Pay</a> a subscription and get private access to our telegram bot.</p>
+
+        <form th:action="@{/leave-email}" th:method="POST">
+            <label for="email">Can't do it now? Leave your E-Mail and do it later:</label>
+            <input type="text" name="email" id="email">
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
